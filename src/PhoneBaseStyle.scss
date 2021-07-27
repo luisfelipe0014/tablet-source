@@ -1,0 +1,121 @@
+body {
+  font-size: 20px;
+  margin: 0;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+}
+
+.phone_infoBare {
+  height: 24px;
+}
+
+.phone_app{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone_title {
+  padding-left: 24px;
+  
+  padding-top: 6px;
+  height: 64px;
+  line-height: 52px;
+  font-size: 24px;
+  font-weight: 500;
+  padding-left: 64px;
+}
+.phone_title .btn-back {
+  width: 42px;
+  height: 42px;
+  color: rgba(255,255,255, 0.7);
+  line-height: 42px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 16px;
+  top: 35px;
+  
+  outline: none;
+  text-shadow: none;
+  text-align: center;
+}
+.phone_title .btn-back:hover {
+  background-color: rgba(255,255,255, 0.3);
+  color: white;
+}
+
+.phone_content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.tablet_wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  background: #2e2f32;
+}
+
+.phone_coque{
+  position: absolute;
+  z-index: 999;
+  width: 500px;
+  height: 1000px;
+  pointer-events:none;
+}
+
+.tablet_screen{
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 1000px;
+  height: 600px;
+}
+
+.container {
+  height: 100%;
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-left: 0;
+  padding-right: 0;
+  transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+*::-webkit-scrollbar
+{
+    width: 3px;
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb
+{
+    background-color: #666;
+}

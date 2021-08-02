@@ -4,17 +4,14 @@ import Vue from 'vue'
 const BASE_URL = 'https://tablet/'
 
 /* eslint-disable camelcase */
-class PhoneAPI {
+class TabletAPI {
   constructor () {
-    console.log(BASE_URL)
     window.addEventListener('message', (event) => {
-      console.log(BASE_URL)
       const eventType = event.data.event
       if (eventType !== undefined && typeof this['on' + eventType] === 'function') {
         this['on' + eventType](event.data)
       } else if (event.data.show !== undefined) {
-        console.log(BASE_URL)
-        store.commit('SET_PHONE_VISIBILITY', event.data.show)
+        store.commit('SET_TABLET_VISIBILITY', event.data.show)
       }
     })
   }
@@ -43,12 +40,20 @@ class PhoneAPI {
   }
 
   // === Autre
-  async closePhone () {
-    return this.post('closePhone')
+  async closeTablet () {
+    return this.post('closeTablet')
+  }
+
+  onupdatePolice (data) {
+    store.commit('SET_POLICE', data.police)
+  }
+
+  onupdateAdmin (data) {
+    store.commit('SET_ADMIN', data.admin)
   }
 
 }
 
-const instance = new PhoneAPI()
+const instance = new TabletAPI()
 
 export default instance

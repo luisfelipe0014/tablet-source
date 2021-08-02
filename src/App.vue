@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 100vh; width: 100vw;" @contextmenu="closePhone">
+  <div style="height: 100vh; width: 100vw;" @contextmenu="closeTablet">
     <div v-if="show === true" @contextmenu.stop>
       <div class="tablet_wrapper">
         <div id="app" class="tablet_screen">
@@ -15,7 +15,7 @@
 
 <script>
 
-import './PhoneBaseStyle.scss'
+import './TabletBaseStyle.scss'
 import { mapGetters, mapActions } from 'vuex'
 import Nav from './components/Nav.vue'
 
@@ -31,12 +31,22 @@ export default {
   },
   methods: {
     ...mapActions(['loadConfig', 'rejectCall']),
-    closePhone () {
-      this.$phoneAPI.closePhone()
+    closeTablet () {
+      this.$tabletAPI.closeTablet()
     }
   },
   computed: {
-    ...mapGetters(['show'])
+    ...mapGetters(['show', 'police', 'admin'])
+  },
+  created () {
+    if (this.police) {
+      this.$router.push({name: 'police.dashboard'})
+      return
+    }
+    if (this.admin) {
+      this.$router.push({name: 'admin.dashboard'})
+      return
+    }
   },
   mounted () {
     window.addEventListener('message', (event) => {
@@ -50,7 +60,7 @@ export default {
         this.$bus.$emit('keyUp' + event.key)
       }
       if (event.key === 'Escape') {
-        this.$phoneAPI.closePhone()
+        this.$tabletAPI.closeTablet()
       }
     })
   }

@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import VueTimeago from './TimeAgo'
-import PhoneAPI from './PhoneAPI'
+import TabletAPI from './TabletAPI'
 
 import AutoFocus from './directives/autofocus'
 
@@ -11,7 +11,7 @@ Vue.use(VueTimeago)
 Vue.config.productionTip = false
 
 Vue.prototype.$bus = new Vue()
-Vue.prototype.$phoneAPI = PhoneAPI
+Vue.prototype.$tabletAPI = TabletAPI
 
 window.VueTimeago = VueTimeago
 window.Vue = Vue

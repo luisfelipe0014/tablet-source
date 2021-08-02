@@ -23,17 +23,6 @@
     "#78909C"
   ],
 
-  "useFormatNumberFrance": false,
-
-  "useWebRTCVocal": false,
-  "RTCConfig": {
-    "iceServers": [{
-      "urls": ["turn:barrax.needrp.net"],
-      "username": "gcphone",
-      "credential": "gcphone"
-    }]
-  },
-
   "//": "REQUIRES https://github.com/citizenfx/screenshot-basic otherwise set enableTakePhoto to false. Thanks to @GLDmACK for his Upload Service!!!", 
   "enableTakePhoto": true,
   "fileUploadService_Url": "https://gcphone.herokuapp.com/uploads/upload",

@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url("./assets/fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("./assets/fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
 body {
   font-size: 20px;
   margin: 0;
@@ -19,7 +34,7 @@ body {
 
 .phone_title {
   padding-left: 24px;
-  
+
   padding-top: 6px;
   height: 64px;
   line-height: 52px;
@@ -40,7 +55,7 @@ body {
   position: absolute;
   left: 16px;
   top: 35px;
-  
+
   outline: none;
   text-shadow: none;
   text-align: center;
@@ -60,16 +75,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
+  width: 1030px;
   height: 600px;
-  background: #2e2f32;
+  // background: #2e2f32;
 }
 
 .phone_coque{
   position: absolute;
   z-index: 999;
   width: 500px;
-  height: 1000px;
+  height: 1030px;
   pointer-events:none;
 }
 
@@ -79,13 +94,17 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 1000px;
+  width: 1030px;
   height: 600px;
+  /* background: #F2F2F2; */
+  background: #F9F9F9;
+  // box-shadow: 0px 2px 8px rgb(0 0 0 / 8%);
+  box-shadow: 0px 2px 8px rgba(0,0,0, 0/ 8%);
 }
 
 .container {
   height: 100%;
-  width: 800px;
+  width: 830px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -56,9 +56,5 @@ typings /
 # dotenv environment variables file
 .env
 
-resources / gcphone / html
 ** / node_modules /
 ** / package-lock.json
-
-# ignore gcphone.zip
-gcphone.zip

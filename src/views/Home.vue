@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <div class="nav fixed-top"><i class="fas fa-line-height"></i><i class="fas fa-cogs"></i></div>
+    <!-- <div class="nav fixed-top"><i class="fas fa-line-height"></i><i class="fas fa-cogs"></i></div> -->
   </div>
 </template>
 
@@ -18,7 +18,7 @@
 }
 
 .nav {
-  width: 80%;
+  width: 802px;
   margin-left: 198px;
   height: 50px;
   background: #000;
